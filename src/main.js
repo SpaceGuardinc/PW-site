@@ -1,10 +1,10 @@
 import { createApp } from 'vue';
-import { createPinia } from 'pinia'; // Импортируем Pinia
+import { createPinia } from 'pinia';
 import './style.css';
 import App from './App.vue';
 
 const app = createApp(App);
-const pinia = createPinia(); // Создаём экземпляр Pinia
+const pinia = createPinia();
 
-app.use(pinia); // Подключаем Pinia к приложению
+app.use(pinia);
 app.mount('#app');
