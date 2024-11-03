@@ -2,9 +2,9 @@
     <div>
       <Header />
       <section class="main">
-        <div class="gif-container">
+        <!-- <div class="gif-container">
           <img src="/src/assets/conv6.gif" width="1000" height="600" alt="Main Animation" />
-        </div>
+        </div> -->
       </section>
       <Footer />
     </div>

@@ -1,9 +1,12 @@
 <template>
   <header class="header">
     <div class="header-content">
+      <!-- Лого -->
       <div class="logo">
         <img src="/src/assets/logo2.png" alt="Logo" />
       </div>
+
+      <!-- Навигационное меню по центру -->
       <nav class="nav-menu">
         <a href="#home">Домой</a>
         <a href="#champions">Герои</a>
@@ -11,6 +14,8 @@
         <a href="#community">Сообщество</a>
         <button class="download-button" @click="downloadLauncher">Скачать лаунчер</button>
       </nav>
+
+      <!-- Действия (вход и регистрация) справа -->
       <div class="header-actions">
         <button class="login-btn">Войти</button>
         <button class="signup-btn">Зарегистрироваться</button>
@@ -24,7 +29,7 @@ export default {
   methods: {
     downloadLauncher() {
       const link = document.createElement('a');
-      link.href = '/srt/assets/launcher.exe';
+      link.href = '/src/assets/launcher.exe';
       link.download = 'launcher.exe';
       link.click();
     }
@@ -48,8 +53,21 @@ export default {
   padding: 0 20px;
 }
 
+.logo {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+}
+
 .logo img {
   height: 50px;
+}
+
+.nav-menu {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
 
 .nav-menu a {
@@ -61,6 +79,13 @@ export default {
 
 .nav-menu a:hover {
   color: #ff9d23;
+}
+
+.header-actions {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
 }
 
 .download-button,
