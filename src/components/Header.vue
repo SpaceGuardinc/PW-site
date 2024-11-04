@@ -40,7 +40,7 @@ export default {
 <style scoped>
 .header {
   background-color: #1a1d2a;
-  padding: 10px 0;
+  padding: 10px;
   border-bottom: 2px solid #333;
 }
 
@@ -48,7 +48,7 @@ export default {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 1200px;
+  max-width: 1600px;
   margin: 0 auto;
   padding: 0 20px;
 }
