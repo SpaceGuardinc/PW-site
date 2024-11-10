@@ -8,10 +8,10 @@
 
       <!-- Навигационное меню по центру -->
       <nav class="nav-menu">
-        <a href="#home">Домой</a>
-        <a href="#champions">Герои</a>
-        <a href="#news">Новости</a>
-        <a href="#community">Сообщество</a>
+        <router-link to="/">Домой</router-link>
+        <router-link to="/champions">Герои</router-link>
+        <router-link to="/news">Новости</router-link>
+        <router-link to="/community">Сообщество</router-link>
         <button class="download-button" @click="downloadLauncher">Скачать лаунчер</button>
       </nav>
 
