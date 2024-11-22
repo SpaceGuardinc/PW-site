@@ -53,9 +53,11 @@
   background-size: cover;
 }
 
-.discord-icon { background-image: url('src/assets/ds_icon_256.png'); }
-.vk-icon { background-image: url('src/assets/vk_icon_256.png'); }
-.tg-icon { background-image: url('src/assets/tg_icon_256.png'); }
+.discord-icon { background-image: url('/assets/ds_icon_256.png'); }
+.vk-icon { background-image: url('/assets/vk_icon_256.png'); }
+.tg-icon { background-image: url('/assets/tg_icon_256.png'); }
+
+
 
 .footer-text {
   color: #777;
