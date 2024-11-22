@@ -16,7 +16,7 @@ export const useNewsStore = defineStore('news', {
       try {
         const response = await axios.get('URL_новостей');
         if (response.status === 200) {
-          this.news = response.data.items || []; // Предположим, что новость приходит в поле `items`
+          this.news = response.data.items || [];
         } else {
           this.error = 'Не удалось загрузить новости';
         }

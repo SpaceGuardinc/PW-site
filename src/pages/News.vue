@@ -29,24 +29,21 @@ export default {
     const items = ref([]);
 
     const fetchRssFeed = async () => {
-      try {
-        // Загружаем RSS данные через прокси
-        const response = await axios.get('/rsshub/telegram/channel/PW_Nova');
-        const xmlData = response.data;
+        try {
+          const response = await axios.get('/rsshub/telegram/channel/PW_Nova');
+          const xmlData = response.data;
 
-        // Парсим XML в объект
-        const parser = new XMLParser();
-        const jsonObj = parser.parse(xmlData);
+          const parser = new XMLParser();
+          const jsonObj = parser.parse(xmlData);
 
-        // Получаем новости из parsed RSS
-        items.value = jsonObj.rss.channel.item.map(item => ({
-          ...item,
-          media: item['media:content'] ? { url: item['media:content'].url, type: item['media:content'].$.type } : null
-        }));
-      } catch (error) {
-        console.error('Ошибка при загрузке RSS:', error);
-      }
-    };
+          items.value = jsonObj.rss.channel.item.map(item => ({
+            ...item,
+            media: item['media:content'] ? { url: item['media:content'].url, type: item['media:content'].$.type } : null
+          }));
+        } catch (error) {
+          console.error('Ошибка при загрузке RSS:', error);
+        }
+      };
 
     // Функция для удаления спецсимволов, таких как 🖼 и прочее
     const sanitizeTitle = (title) => {
